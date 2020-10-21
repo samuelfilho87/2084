@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,900;1,700&display=swap');
+
+* {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  padding: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.4em;
+  font-weight: 700;
+  font-style: italic;
+}
+
+p {
+  margin: 16px 0;
+  font-size: 1.6em;
+  text-align: justify;
+  line-height: 1.4em;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 1.6em;
+  font-weight: 900;
+  color: inherit;
+  text-decoration: none;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+button:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.1);
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+main {
+  border: solid 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-self: center;
+}
+
+section {
+  min-width: 100%;
+  max-height: 480px;
+  overflow: hidden;
+  display: flex;
+  transition: all 2s;
+}
+
+section .box-img {
+  min-width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
+
+section .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+article {
+  margin: 40px;
+  min-width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  width: 100%;
+  margin: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .wrap {
+  margin-left: auto;
+  display: flex;
+}
+
+footer span {
+  margin: 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+footer p {
+  font-weight: 700;
+}
+
+footer a {
+  margin: 0 0 0 auto;
+}
+
+#box-ligar-robo {
+  min-width: 50%;
+  height: 100%;
+  background: url(imgs/bg-ligar-robo.jpg) center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box-ligar-robo button {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+}
+
+#box-ligar-robo button:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+#box-ligar-robo svg {
+  width: 50%;
+  fill: red;
+}
+
+.box-robo {
+  min-width: 54%;
+  height: 100%;
+  padding: 0 24px;
+  background: url(imgs/bg-robo-processos.png) bottom repeat-x;
+  background-size: 100% 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box-robo .robo {
+  min-width: 300px;
+  max-width: 300px;
+  margin-right: 40px;
+}
+
+.box-robo .robo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.box-robo .bateria {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.box-robo .bateria svg {
+  fill: green;
+  transition: all 1s;
+}
+
+.box-robo .bateria span {
+  font-size: 1.6em;
+  font-weight: 500;
+}
+
+.progress-bar {
+  position: relative;
+  width: 200px;
+  height: 28px;
+  margin: 0 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.progress-bar .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 8px;
+  background: green;
+  transition: all 1s;
+}
+
+.processos {
+  margin-right: 40px;
+}
+
+.processos table {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border-spacing: 0 0px;
+  background: #fff;
+}
+
+.processos table th {
+  padding-bottom: 4px;
+  font-size: 1.2em;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+.processos table tbody tr:first-child td {
+  padding-top: 8px;
+}
+
+.processos table td {
+  width: 100%;
+  padding: 6px 0px;
+  font-size: 1.2em;
+}
+
+.processos table td.status {
+  font-size: 1.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.processos table td.bold {
+  font-weight: 700;
+}
+
+.processos table td.executando {
+  color: blue;
+}
+
+.processos table td.pronto {
+  color: green;
+}
+
+.processos table td.bloqueado {
+  color: red;
+}
+
+.box-robo .opcoes {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.box-robo .opcoes h1 {
+  width: 100%;
+  font-size: 2.4em;
+  text-align: center;
+}
+
+.box-robo .opcoes button {
+  width: calc(50% - 8px);
+  font-size: 1.4em;
+  border-radius: 8px;
+}
+
+.box-robo .opcoes button + button {
+  margin-top: 8px;
+}
+
+.box-robo .opcoes button:hover {
+  background: rgb(202, 201, 201);
+}
+
+.box-robo-interativo {
+  align-content: flex-end;
+}
+
+.box-robo-interativo .processos {
+  transform: translateY(-40px);
+}
+
+.box-robo-interativo .opcoes {
+  margin: 24px 0;
+}
+
+#page3 .bateria .progress {
+  width: 100%;
+}
+
+#page4 .bateria .progress {
+  width: 80%;
+}
+
+#page5 .bateria .progress {
+  width: 50%;
+  background: orange;
+}
+
+#page5 .bateria svg {
+  fill: orange;
+}
+
+#page6 .bateria .progress {
+  width: 20%;
+  background: red;
+}
+
+#page6 .bateria svg {
+  fill: red;
+}
+
+.bg-modal {
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  transition: all 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-modal .modal {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.bg-modal #falhou {
+  background: url(imgs/missao-falhou.png) center center no-repeat;
+  background-size: contain;
+}
+
+.bg-modal #sucesso {
+  background: url(imgs/sucesso.png) center center no-repeat;
+  background-size: contain;
+}
+
+.bg-modal #sucesso-final {
+  background: url(imgs/sucesso-final.png) center center no-repeat;
+  background-size: contain;
+  display: none;
+}
+
+.bg-modal p {
+  padding: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.bg-modal button{
+  margin-top: 16px;
+  border: solid 2px #fff;
+  border-radius: 8px;
+  color: #fff;
+  background: none;
+  align-self: center;
+}
+
+.bg-modal button:hover {
+  color: #000;
+  background: rgb(202, 201, 201);
+}
+
+@media screen and (max-width: 1440px) {
+  body {
+    font-size: 60%;
+  }
+
+  p {
+    margin: 8px 0;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  body {
+    font-size: 58.2%;
+  }
+
+  p {
+    margin: 8px 0;
+  }
+
+  .box-robo .robo {
+    min-width: 240px;
+    max-width: 240px;
+    margin-right: 20px;
+  }
+
+  .box-robo .opcoes button {
+    font-size: 1.3em;
+  }
+}
